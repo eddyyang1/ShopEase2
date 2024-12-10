@@ -11,3 +11,11 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
+
+class Seller(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='seller_profile')
+    store_name = models.CharField(max_length=100)
+    # Add any other fields you want the seller to have
+
+    def __str__(self):
+        return self.store_name

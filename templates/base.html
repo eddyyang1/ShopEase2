@@ -1,22 +1,175 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#  <meta charset="utf-8">#}
+{#  <meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#  <title>ShopEase-Home</title>#}
+{#  {% load django_bootstrap5 %}  <!-- or  if using Bootstrap 5 -->#}
+{##}
+{#  <!-- Bootstrap CSS (Automatically handled by django-bootstrap4) -->#}
+{#  {% bootstrap_css %}#}
+{##}
+{#  <style>#}
+{#    /* Sticky Footer Styles */#}
+{#    html, body {#}
+{#      height: 100%;#}
+{#      margin: 0;#}
+{#    }#}
+{##}
+{#    .content {#}
+{#      min-height: 100%;#}
+{#      display: flex;#}
+{#      flex-direction: column;#}
+{#    }#}
+{##}
+{#    .main-content {#}
+{#      flex: 1;#}
+{#    }#}
+{##}
+{#    footer {#}
+{#      background-color: #f2f2f2;#}
+{#      padding: 25px;#}
+{#      text-align: center;#}
+{#    }#}
+{##}
+{#    /* Custom style for the form-control in footer */#}
+{#    footer .form-control {#}
+{#      display: block;#}
+{#      margin-left: auto;#}
+{#      margin-right: auto;#}
+{#      width: 25%;#}
+{#    }#}
+{#  </style>#}
+{#</head>#}
+{#<body>#}
+{##}
+{#  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">#}
+{#    <div class="container-fluid">#}
+{#      <!--<a class="navbar-brand" href="#">Logo</a>-->#}
+{#      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">#}
+{#        <span class="navbar-toggler-icon"></span>#}
+{#      </button>#}
+{#      <div class="collapse navbar-collapse" id="navbarNav">#}
+{#        <ul class="navbar-nav">#}
+{#          <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>#}
+{#          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li><!-- Link to Products Section -->#}
+{#          <li class="nav-item"><a class="nav-link" href="#">Stores</a></li>#}
+{#          <li class="nav-item"><a class="nav-link" href="#">Chat</a></li>#}
+{#          #}
+{#        </ul>#}
+{#        <ul class="navbar-nav ms-auto">#}
+{#          <li class="nav-item"><a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span> Seller Account</a></li>#}
+{#          <li class="nav-item"><a class="nav-link" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>#}
+{#        </ul>#}
+{#      </div>#}
+{#    </div>#}
+{#  </nav>#}
+{##}
+{#  <div class="container">#}
+{#    {% block content %}{% endblock %}#}
+{#  </div>#}
+{##}
+{#  <!-- Products Section (id="products" for navigation) -->#}
+{#  <div id="products" class="container">#}
+{#    <h2 class="text-center">Our Products</h2>#}
+{#    #}
+{#    <div class="row">#}
+{#      <div class="col-sm-4">#}
+{#        <div class="panel panel-primary">#}
+{#          <div class="panel-heading">BLACK FRIDAY DEAL</div>#}
+{#          <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>#}
+{#          <div class="panel-footer">Buy 50 mobiles and get a gift card</div>#}
+{#        </div>#}
+{#      </div>#}
+{#      <div class="col-sm-4"> #}
+{#        <div class="panel panel-danger">#}
+{#          <div class="panel-heading">BLACK FRIDAY DEAL</div>#}
+{#          <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>#}
+{#          <div class="panel-footer">Buy 50 mobiles and get a gift card</div>#}
+{#        </div>#}
+{#      </div>#}
+{#      <div class="col-sm-4"> #}
+{#        <div class="panel panel-success">#}
+{#          <div class="panel-heading">BLACK FRIDAY DEAL</div>#}
+{#          <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>#}
+{#          <div class="panel-footer">Buy 50 mobiles and get a gift card</div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#    #}
+{#    <div class="row">#}
+{#      <div class="col-sm-4">#}
+{#        <div class="panel panel-primary">#}
+{#          <div class="panel-heading">BLACK FRIDAY DEAL</div>#}
+{#          <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>#}
+{#          <div class="panel-footer">Buy 50 mobiles and get a gift card</div>#}
+{#        </div>#}
+{#      </div>#}
+{#      <div class="col-sm-4"> #}
+{#        <div class="panel panel-primary">#}
+{#          <div class="panel-heading">BLACK FRIDAY DEAL</div>#}
+{#          <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>#}
+{#          <div class="panel-footer">Buy 50 mobiles and get a gift card</div>#}
+{#        </div>#}
+{#      </div>#}
+{#      <div class="col-sm-4"> #}
+{#        <div class="panel panel-primary">#}
+{#          <div class="panel-heading">BLACK FRIDAY DEAL</div>#}
+{#          <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>#}
+{#          <div class="panel-footer">Buy 50 mobiles and get a gift card</div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{##}
+{#  <footer class="container-fluid text-center">#}
+{#  <p>Sign-Up for deal reminders</p>  #}
+{#  <form class="form-inline">#}
+{#    <input type="email" class="form-control" size="50" placeholder="Email Address"> <br>#}
+{#    <button type="button" class="btn btn-danger">Sign Up</button>#}
+{#  </form>#}
+{#</footer>#}
+{##}
+{#  {% bootstrap_javascript %}#}
+{#</body>#}
+{#</html>#}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Home - ShopEase{% endblock %}</title>
+    <title>ShopEase-Home</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header>
-        <h1>Karibu kwa Shop Yetu</h1>
         <nav>
             <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'products' %}">Products</a></li>
-                <li><a href="{% url 'login' %}">Seller Login</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {% if user.user_type == 'seller' %}
+                        <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                    {% endif %}
+                {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>
-    <!-- Your content goes here -->
+
+    <main>
+        {% block content %}
+        <!-- Main content will be injected here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ShopEase. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+

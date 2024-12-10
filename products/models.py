@@ -1,29 +1,28 @@
+# products/models.py
 from django.db import models
-from users.models import User
+from users.models import Seller
 
 class Shop(models.Model):
-    owner = models.OneToOneField(User, on_delete=models.CASCADE, limit_choices_to={'user_type': 'seller'})
+    seller = models.OneToOneField(Seller, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-    description = models.TextField(blank=True)
+    description = models.TextField()
 
     def __str__(self):
         return self.name
 
 class Category(models.Model):
-    name = models.CharField(max_length=50)
-    shop = models.ForeignKey(Shop, on_delete=models.CASCADE, related_name='categories')
+    name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
-# products/models.py
 class Product(models.Model):
-    name = models.CharField(max_length=200)
-    description = models.TextField(blank=True, null=True)
-    category = models.CharField(max_length=200)
+    shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
+    name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    shop = models.ForeignKey(User, on_delete=models.CASCADE, related_name='products')  # Tied to the seller/shop
+    description = models.TextField(default='')  # Set a default value here
+    image = models.ImageField(upload_to='product_images/', blank=True, null=True)
 
     def __str__(self):
         return self.name
-

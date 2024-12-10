@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+<a href="{% url 'add-seller' %}">Create New Seller</a>
+<h3>Existing Sellers:</h3>
+<ul>
+    {% for seller in sellers %}
+    <li>{{ seller.username }} - {{ seller.email }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

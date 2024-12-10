@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section id="login">
+    <h2>Seller Login</h2>
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+</section>
+
+<!-- Link to a static CSS file for styling -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+<!-- Optionally, add static JS files here if needed -->
+<script src="{% static 'js/login.js' %}"></script>
+
+{% endblock %}

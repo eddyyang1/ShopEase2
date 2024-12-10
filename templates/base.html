@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home - ShopEase{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Karibu kwa Shop Yetu</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'products' %}">Products</a></li>
+                <li><a href="{% url 'login' %}">Seller Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Your content goes here -->
+</body>
+</html>
